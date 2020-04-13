@@ -41,6 +41,7 @@ and have quick fingers? If so, then TeaPet is definitely for you!
 
 Explore this User Guide to find out more. Enjoy!
 
+//end::intro[]
 //@@author TheElectricBlender
 //tag::navigate[]
 === Navigating the User Guide
@@ -133,7 +134,8 @@ For example,  typing `help` and pressing kbd:[Enter] will open the help window.
 TIP: If you have any questions, please check out our <<FAQ>> section.
 //end::QuickStart[]
 
-
+//@@author garysyndromes
+//tag::overview-features[]
 == Overview of Features
 This section will provide you a brief overview of TeaPet's cool features and functionality for you to better familiarise yourself with TeaPet.
 
@@ -157,7 +159,7 @@ This section will provide you a brief overview of TeaPet's cool features and fun
 . **Data is saved onto your hard disk automatically**
 .. Any changes made will be saved onto your computer so you don't have to worry about data being lost.
 
-
+//end::overview-features[]
 [[Features]]
 == Features
 This section aims to provide you with in-depth details of TeaPet's main features, as well as how to
@@ -511,7 +513,7 @@ Deletes an assessment from the academics list.
 
     academics delete INDEX
 
-Deletes the assessment with at the given index.
+* Deletes the assessment with at the given index.
 [NOTE]
 Index should be a positive integer and be a valid index.
 
@@ -537,6 +539,8 @@ Submits student(s) work for a specific assessment.
 Submits work for the assessment with at the given index.
 [NOTE]
 Index should be a positive integer and be a valid index.
+[NOTE]
+Student whose work has already been submitted cannot be submitted again.
 
 *Example:*
 
@@ -563,6 +567,8 @@ Marks student(s) work for a specific assessment.
 Marks work for the assessment with at the given index.
 [NOTE]
 Index should be a positive integer and be a valid index.
+[NOTE]
+Only the submissions of students whose work has already been submitted can be marked.
 
 *Example:*
 

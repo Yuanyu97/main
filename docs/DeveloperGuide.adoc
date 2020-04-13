@@ -1067,9 +1067,9 @@ The following is a detailed explanation of the operations which `EventAddCommand
 NOTE: Format for adding an event to the schedule is `schedule add eventName/EVENT_DESCRIPTION startDateTime/YYYY-MM-DDTHH:MM
  endDateTime/YYYY-MM-DDTHH:MM recur/RECUR_DESCRIPTION color/COLOR_CODE`
 
-NOTE: RECUR_DESCRIPTION can only take the values `none`, `daily` or `weekly`.
+WARNING: RECUR_DESCRIPTION can only take the values `none`, `daily` or `weekly`.
 
-NOTE: COLOR_CODE can only take the values `1`-`23`.
+WARNING: COLOR_CODE can only take the values `1`-`23`.
 
 *Step 1:* The `EventAddCommand#execute(Model model)` method is called which validates if the `VEvent` object from
 the parser is valid.
@@ -1115,11 +1115,11 @@ NOTE: Format for editing an event in the schedule is `schedule edit INDEX [event
              [endDateTime/YYYY-MM-DDTHH:MM] [recur/RECUR_DESCRIPTION] [color/COLOR_CODE]`
 NOTE: INDEX is the index of the event. Which can be obtained by the indexGet Command. See <<indexGetCommandSection,below>> for more information.
 
-NOTE: RECUR_DESCRIPTION can only take the values `none`, `daily` or `weekly`.
+WARNING: RECUR_DESCRIPTION can only take the values `none`, `daily` or `weekly`.
 
-NOTE: COLOR_CODE can only take the values `1`-`23`.
+WARNING: COLOR_CODE can only take the values `1`-`23`.
 
-NOTE: All fields are optional, however at least one field needs to be entered to edit.
+WARNING: All fields are optional, however at least one field needs to be entered to edit.
 
 *Step 1*: The `EventEditCommand#execute(Model model)` method is executed which edits the details of the specified
 `VEvent` in the model. This method checks if the `index` defined when instantiating
@@ -1128,9 +1128,9 @@ the `editVEventDescriptor` is valid.
 Since the fields are optional, the fields not entered by the user will reuse the existing values that are currently stored and defined
 in the `VEvent` object.
 
-NOTE: Index must be a positive number greater than zero.
+WARNING: Index must be a positive number greater than zero.
 
-NOTE: At least 1 field of event needs to be provided to `editVEventDescriptor` to edit.
+WARNING: At least 1 field of event needs to be provided to `editVEventDescriptor` to edit.
 
 *Step 2*: A new `VEvent` with the newly updated values will be created which replaces the existing `VEvent`
 object in the current model using the `Model#setVEvent(Index index, VEvent vEvent);` method. The values input to editVEventDescriptor
@@ -1162,7 +1162,7 @@ NOTE: INDEX is the index of the event. Which can be obtained by the indexGet Com
 `VEvent` in the model. This method checks if the `targetIndex` defined when instantiating
 `EventDeleteCommand(Index targetIndex)` is valid.
 
-NOTE: Index must be a positive number greater than zero and within the bounds of the number of events in the scheduler.
+WARNING: Index must be a positive number greater than zero and within the bounds of the number of events in the scheduler.
 
 *Step 2*: The `VEvent` at the specified `targetIndex` is then removed from `EventHistory#VEvents`
 using the Model#delete(Index index) method.
@@ -1173,6 +1173,8 @@ using the Model#delete(Index index) method.
 *Step 4*: The command box will be reflected with the success message and a new
 `CommandResult` will be returned with the message.
 
+
+The following sequence diagram will provide a clearer picture on how the EventDeleteCommand works.
 
 .Sequence Diagram for EventDeleteCommand
 image::event/sequence_diagram_event_delete_command.png[]
@@ -1216,6 +1218,8 @@ will then format the message according to whether there the list of Events is em
 *Step 4*: The command box will be reflected with the message and a new
 `CommandResult` will be returned with the message.
 
+The following Activity Diagram will provide a clearer picture on how the EventIndexCommand is supposed to run.
+
 .Activity Diagram for EventIndexCommand
 image::event/EventIndexCommandActivityDiagram.png[]
 
@@ -1238,6 +1242,7 @@ will be returned.
 *Step 3*: The success message is generated using EventIndexAllCommand#generateResultMessage(List<Pair<Index, VEvent>> pairVEventIndexList)
 and a new `CommandResult` will be returned with this message.
 
+The following Activity Diagram will provide a clearer picture on how the EventIndexAllCommand is supposed to run.
 
 .Activity Diagram for EventIndexAllCommand
 image::event/EventIndexAllActivityDiagram.png[]
@@ -1249,9 +1254,9 @@ The following is a detailed explanation of the operations which `EventViewComman
 
 NOTE: Format for changing the view mode of the schedule is `schedule view mode/SCHEDULE_MODE date/YYYY-MM-DD`.
 
-NOTE: `SCHEDULE_MODE` can only takes the values `daily` or `weekly`
+WARNING: `SCHEDULE_MODE` can only takes the values `daily` or `weekly`. Any other values will result in an error thrown.
 
-NOTE: Date must be entered in YYYY-MM-DD format.
+WARNING: Date must be entered in YYYY-MM-DD format. Any other values will result in an error thrown.
 
 
 *Step 1*: The `EventViewCommand#execute(Model model)` method is executed which changes the view mode of the model.
@@ -1260,6 +1265,8 @@ with `EventViewCommand#scheduleViewMode` and `EventViewCommand#targetViewDateTim
 
 *Step 2*: The success message is generated using EventViewCommand#generateSuccessMessage(EventScheduleView eventScheduleViewMode, LocalDateTime targetViewDate)
 and a new `CommandResult` will be returned with this message.
+
+The following Activity Diagram will provide a clearer picture on how the EventViewCommand is supposed to run.
 
 .Activity Diagram for EventViewCommand
 image::event/EventViewCommandActivityDiagram.png[]

@@ -58,7 +58,11 @@ Different view modes are also available for the Personal Schedule. The implement
 |===
 
 include::../UserGuide.adoc[tag=intro]
+
+include::../UserGuide.adoc[tag=overview-features]
+
 include::../UserGuide.adoc[tag=scheduler-A]
+
 include::../UserGuide.adoc[tag=schedule-main]
 
 
@@ -69,7 +73,15 @@ include::../UserGuide.adoc[tag=schedule-main]
 |_Given below are sections I contributed to the Developer Guide. They showcase my ability to write technical documentation and the technical depth of my contributions to the project._
 |===
 
-include::../DeveloperGuide.adoc[tag=undoredo]
+include::../DeveloperGuide.adoc[tag=introduction]
 
-include::../DeveloperGuide.adoc[tag=dataencryption]
+include::../DeveloperGuide.adoc[tag=overview]
+
+include::../DeveloperGuide.adoc[tag=personal-schedule-features]
+
+include::../DeveloperGuide.adoc[tag=schedule-featureA]
+
+include::../DeveloperGuide.adoc[tag=manual-test-personal-schedule]
+
+
 
