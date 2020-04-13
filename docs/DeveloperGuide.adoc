@@ -2185,6 +2185,9 @@ Expected: A file named studentAcademics.csv should be created in the data folder
 
 //@@author garysyndromes
 //tag::manual-test-personal-schedule[]
+
+//@@author TheElectricBlender
+//tag::manual-test-schedulerA[]
 === Manual Test: Personal Schedule
 
 . Displaying the personal schedule
@@ -2192,8 +2195,6 @@ Expected: A file named studentAcademics.csv should be created in the data folder
 .. Test case: `schedule` +
 Expected: User should now be able to view the schedule at the current date. A help message should also be shown in the command box.
 
-//@@author TheElectricBlender
-//tag::manual-test-schedulerA[]
 . Adding an event to the scheduler
 
 .. Prerequisites: The scheduler already contain an event with name "Coffee Break", startDateTime "2020-04-04T12:00", endDateTime "2020-04-04T13:00".
