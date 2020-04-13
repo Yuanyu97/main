@@ -2379,3 +2379,32 @@ Expected: A file named studentNotes.csv should be created in the data folder of 
 .. Test case: `notes export 3` +
 Expected: An error message is shown as there should be no arguments passed into notes export command.
 //end::manual-test-notes[]
+
+//@@ author
+[appendix]
+== Effort
+
+*Overview* +
+Our team wanted to make an application that could reduce the hassle of managing couriers' orders. We decided to build
+Delino which aims to provide a centralised platform for couriers to easily manage their deliveries. Delino is
+significantly different from Address Book 3 (AB3). In addition to the existing basic features of AB3, we needed to add
+additional features to satisfy the needs of our target audience, couriers. Features that are unique to Delino are
+Nearby, Show, Import, Return and the enhanced Search.
+
+*Challenges faced* +
+
+. *Brainstorming of ideas* - Ideation was the first hurdle we faced as a team. Coming up with ideas was easy, however,
+the conflict arose when we were deciding on which idea to implement as every member wanted to solve a different problem.
+We listed the pros and cons of each proposed idea, and had a few group meetings to evaluate the proposed ideas. We
+finally chose an idea that was deemed to be most feasible.
+
+. *Debugging* - Each of us was doing our own individual features, hence when we were merging our pull requests, there are
+often merge conflicts. Furthermore, as there are are some inter-dependencies between our features, when one person changes
+his or her code, the other party gets affected. Also, when we were doing quality assurance, we spent a long time figuring out
+why some of the test cases fail. However, that helped us better understand our code and its expected behaviour, which proved
+to be a big help when building TeaPet
+
+
+. *Building TeaPet upon AB3* - Initially, our group took a long time understanding the logic of AB3. In addition, converting our
+own ideas into code and building upon it on AB3 was very tough. We took a long time familiarising with the the flow of the code, hence resulting
+in a slow development of TeaPet initially.
