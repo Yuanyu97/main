@@ -422,7 +422,7 @@ public class MainWindow extends UiPart<Stage> {
                 handleAcademics();
             }
 
-            if (consoleReply.contains("Refreshed students") || consoleReply.contains("Edited Student")) {
+            if (consoleReply.contains("Edited Student")) {
                 handleStudentDefault();
             }
 
