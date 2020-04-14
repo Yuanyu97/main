@@ -7,7 +7,7 @@
 TeaPet is an integrated platform fully customized for Form Teachers in Primary, Secondary and Tertiary institutions,
 with the aim of helping teachers manage their classroom effectively. +
 Wanting to help lessen the burden of teachers, we teamed together to develop TeaPet!
-+
+
 
 We are a team based in the http://www.comp.nus.edu.sg[School of Computing, National University of Singapore].
 

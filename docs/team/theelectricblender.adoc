@@ -120,10 +120,12 @@ include::../UserGuide.adoc[tag=ScheduleSummary]
 |===
 
 include::../DeveloperGuide.adoc[tag=particulars-feature]
+include::../DeveloperGuide.adoc[tag=class-overview-scheduler]
 include::../DeveloperGuide.adoc[tag=uc-simon]
 include::../DeveloperGuide.adoc[tag=uc-simon2]
 include::../DeveloperGuide.adoc[tag=manual-test-particulars]
 include::../DeveloperGuide.adoc[tag=manual-test-scheduler]
+
 
 
 
